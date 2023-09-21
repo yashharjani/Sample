@@ -10,15 +10,15 @@ In order to perform following automation test scripts, we need to install few so
 
 1. Java jdk-1.8 or higher 
 
-	Link: https://www.oracle.com/in/java/technologies/downloads/
+	-> Link: https://www.oracle.com/in/java/technologies/downloads/
 
 2. Integrated development environment (IDE)
 
 	You can download either IntelliJ Idea IDE or Eclipse IDE.
 
-	Link for IntelliJ: https://www.jetbrains.com/idea/
+	-> Link for IntelliJ: https://www.jetbrains.com/idea/
 
-	Link for Eclipse: https://www.eclipse.org/downloads/
+	-> Link for Eclipse: https://www.eclipse.org/downloads/
 
 	If Eclipse is chosen, 
 
