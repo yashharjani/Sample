@@ -86,22 +86,29 @@ Glimpse of Step Definition Class:
 	public class homeScreen extends browserSelector {
 		static homePage Obj = new homePage();
 
+        // Step definition for Given
 		@Given("Enter URL")
 		public void verifyURL() {
 			System.out.println("== Enter URL ==");
+			// Add any additional code related to this step, if needed
 		}
 
+		// Step definition for When
 		@When("Browser is Open")
 		public void verifyBrowser() {
 			Obj.verifyHomePage();
 			System.out.println("== Browser is open ==");
+			// Add any additional code related to this step, if needed
 		}
 
+		// Step definition for Then
 		@Then("User is redirected to URL")
 		public void verifyRedirection() {
 			System.out.println("== User is redirected to URL ==");
+			// Add any additional code related to this step, if needed
 		}
 	}
+
 
 <ins>**Test Runner Class:**<ins>
 
@@ -123,6 +130,7 @@ Glimpse of runner class:
 
 	public class testNgRunner extends AbstractTestNGCucumberTests {
 	}
+
 
 <ins>**To run the automation scripts, following ways can be followed:**<ins>
 
