@@ -54,7 +54,9 @@ A typical test will have a structure similar to this:
 			
 
 
-Automation test scripts are implemented with PAGE OBJECT MODEL (POM) design pattern.
+Automation test scripts are implemented with 
+#### PAGE OBJECT MODEL (POM) 
+design pattern.
 
 To better organize the test code and make it more maintainable, it is recommended to use the Page Object Design Pattern. 
 With this pattern, the UI elements of the web application are modeled as objects within the test code. This approach reduces code duplication and allows easy updates if the UI changes. 
@@ -84,7 +86,6 @@ So, now when Cucumber executes a step of the scenario mentioned in the feature f
 Glimpse of Step Definition Class:
 
 public class homeScreen extends browserSelector {
-
     static homePage Obj = new homePage();
 
     @Given("Enter URL")
@@ -112,15 +113,25 @@ In short, runner class maps the feature file steps to its corresponding step def
 Glimpse of runner class:
 
 @CucumberOptions(
+
         features = {"src/test/java/features"},
-        glue = {"Stepdef"},
+        
+		glue = {"Stepdef"},
+		
         plugin = {"pretty", "json:target/json-report/cucumber.json",
-                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+        
+						"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+
         },
-        monochrome = true,
-        publish = true
+        
+		monochrome = true,
+        
+		publish = true
+
 )
+
 public class testNgRunner extends AbstractTestNGCucumberTests {
+
 }
 
 #### To run the automation scripts, following ways can be followed:
