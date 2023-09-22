@@ -47,13 +47,9 @@ Tests are written in the Cucumber framework using the Gherkin syntax. If you're 
 A typical test will have a structure similar to this:
 
 	Feature: Verify user redirection on web application
-
 		Scenario: Verify USer is redirected to correct url
-		
-			Given Enter URL
-			
-			When Browser is Open
-			
+			Given Enter URL	
+			When Browser is Open	
 			Then User is redirected to URL
 			
 
