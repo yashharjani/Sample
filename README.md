@@ -54,9 +54,7 @@ A typical test will have a structure similar to this:
 			
 
 
-Automation test scripts are implemented with 
-#### PAGE OBJECT MODEL (POM) 
-design pattern.
+Automation test scripts are implemented with **PAGE OBJECT MODEL (POM)** design pattern.
 
 To better organize the test code and make it more maintainable, it is recommended to use the Page Object Design Pattern. 
 With this pattern, the UI elements of the web application are modeled as objects within the test code. This approach reduces code duplication and allows easy updates if the UI changes. 
