@@ -39,7 +39,7 @@ This Test Automation Framework is created using Java + Selenium Web Driver + Tes
 Additionally, it offers the ability to capture screenshots for tests and generate error shots for failed test cases.
 
 In this repository, we encourage the use of Behavior-Driven Development (BDD) with Cucumber and Java to develop automation scripts. 
-We provide predefined Step Definitions packaged under /Basic_Template/src/test/java/Stepdef/homeScreen.java to help you accelerate your automation development. 
+We provide Step Definitions packaged under /Basic_Template/src/test/java/Stepdef/homeScreen.java .
 These Step Definitions can be customized according to your needs.
 
 Tests are written in the Cucumber framework using the Gherkin syntax. If you're new to Gherkin and Cucumber, you can find more information at https://cucumber.io/docs/cucumber/
