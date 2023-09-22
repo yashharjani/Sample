@@ -117,18 +117,25 @@ In short, runner class maps the feature file steps to its corresponding step def
 
 Glimpse of runner class:
 
+	// The CucumberOptions annotation is used to configure Cucumber test execution
 	@CucumberOptions(
 
+			// Specify the location of your feature files and package where your step definitions are located
 			features = {"src/test/java/features"},
 			glue = {"Stepdef"},
+			
+			// Configure the Cucumber plugin options
 			plugin = {"pretty", "json:target/json-report/cucumber.json",
 							"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 			},
+			
+			// Display the Cucumber output in monochrome (removes color codes)
 			monochrome = true,
 			publish = true
 	)
 
 	public class testNgRunner extends AbstractTestNGCucumberTests {
+		// TestNG annotations or additional configurations can be added here if needed
 	}
 
 
