@@ -71,7 +71,7 @@ The automation framework structure is as follows:
 - There is a POM.xml file in which all dependencies and plugins are present.
 - There is also a testng.xml file located at /Basic_Template/testng.xml for cross browser testing such as Chrome, Firefox, Microsoft Edge, etc.
 
-**Feature file description:**
+<ins>**Feature file description:**<ins>
 
 The feature file is the essential segment of cucumber tool, which is used to write acceptance steps for automation testing. 
 Acceptance steps generally follow the application specification. A feature file is usually a common file which stores feature, scenarios, and feature description to be tested.
