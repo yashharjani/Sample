@@ -86,7 +86,7 @@ Glimpse of Step Definition Class:
 	public class homeScreen extends browserSelector {
 		static homePage Obj = new homePage();
 
-        // Step definition for Given
+		// Step definition for Given
 		@Given("Enter URL")
 		public void verifyURL() {
 			System.out.println("== Enter URL ==");
