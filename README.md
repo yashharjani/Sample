@@ -163,4 +163,5 @@ Extent Spark Reports
 
 ## Contact
 
-- [Provide contact information for inquiries or support]
+- QA Manager: Nishit Sheth
+- QA Engineer: Yash Harjani
