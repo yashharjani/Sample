@@ -83,25 +83,25 @@ So, now when Cucumber executes a step of the scenario mentioned in the feature f
 
 Glimpse of Step Definition Class:
 
-public class homeScreen extends browserSelector {
-    static homePage Obj = new homePage();
+	public class homeScreen extends browserSelector {
+		static homePage Obj = new homePage();
 
-    @Given("Enter URL")
-    public void verifyURL() {
-        System.out.println("== Enter URL ==");
-    }
+		@Given("Enter URL")
+		public void verifyURL() {
+			System.out.println("== Enter URL ==");
+		}
 
-    @When("Browser is Open")
-    public void verifyBrowser() {
-        Obj.verifyHomePage();
-        System.out.println("== Browser is open ==");
-    }
+		@When("Browser is Open")
+		public void verifyBrowser() {
+			Obj.verifyHomePage();
+			System.out.println("== Browser is open ==");
+		}
 
-    @Then("User is redirected to URL")
-    public void verifyRedirection() {
-        System.out.println("== User is redirected to URL ==");
-    }
-}
+		@Then("User is redirected to URL")
+		public void verifyRedirection() {
+			System.out.println("== User is redirected to URL ==");
+		}
+	}
 
 #### Test Runner Class:
 
@@ -110,27 +110,19 @@ In short, runner class maps the feature file steps to its corresponding step def
 
 Glimpse of runner class:
 
-@CucumberOptions(
+	@CucumberOptions(
 
-        features = {"src/test/java/features"},
-        
-		glue = {"Stepdef"},
-		
-        plugin = {"pretty", "json:target/json-report/cucumber.json",
-        
-						"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+			features = {"src/test/java/features"},
+			glue = {"Stepdef"},
+			plugin = {"pretty", "json:target/json-report/cucumber.json",
+							"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+			},
+			monochrome = true,
+			publish = true
+	)
 
-        },
-        
-		monochrome = true,
-        
-		publish = true
-
-)
-
-public class testNgRunner extends AbstractTestNGCucumberTests {
-
-}
+	public class testNgRunner extends AbstractTestNGCucumberTests {
+	}
 
 #### To run the automation scripts, following ways can be followed:
 
