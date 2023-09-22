@@ -76,22 +76,64 @@ The automation framework structure is as follows:
 The feature file is the essential segment of cucumber tool, which is used to write acceptance steps for automation testing. 
 Acceptance steps generally follow the application specification. A feature file is usually a common file which stores feature, scenarios, and feature description to be tested.
 
-Step Definition description:
+#### Step Definition description:
 
 Steps definition file stores the mapping between each step of the scenario defined in the feature file with a code of function to be executed. 
 So, now when Cucumber executes a step of the scenario mentioned in the feature file, it scans the step definition file and figures out which function is to be called.
 
-Test Runner Class:
+Glimpse of Step Definition Class:
+
+public class homeScreen extends browserSelector {
+
+    static homePage Obj = new homePage();
+
+    @Given("Enter URL")
+    public void verifyURL() {
+        System.out.println("== Enter URL ==");
+    }
+
+    @When("Browser is Open")
+    public void verifyBrowser() {
+        Obj.verifyHomePage();
+        System.out.println("== Browser is open ==");
+    }
+
+    @Then("User is redirected to URL")
+    public void verifyRedirection() {
+        System.out.println("== User is redirected to URL ==");
+    }
+}
+
+#### Test Runner Class:
 
 In Cucumber, the test runner file executes the Cucumber feature files and coordinates the steps defined in those feature files with the corresponding step definitions.
 In short, runner class maps the feature file steps to its corresponding step definition code.
 
-To run the automation scripts, following ways can be followed:
+Glimpse of runner class:
+
+@CucumberOptions(
+        features = {"src/test/java/features"},
+        glue = {"Stepdef"},
+        plugin = {"pretty", "json:target/json-report/cucumber.json",
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+        },
+        monochrome = true,
+        publish = true
+)
+public class testNgRunner extends AbstractTestNGCucumberTests {
+}
+
+#### To run the automation scripts, following ways can be followed:
 
 - Run the testng.xml file using TestNG. Single and cross browser testing can be performed using this file.  
 - Run through command line. Open the cmd terminal where pom.xml file is located. Write and run the command (mvn clean install).
 - Run the feature files individually using cucumber.
 - Run the TestRunner class using TestNG.
+
+#### Test Data
+
+- [Describe how to manage test data, if applicable]
+- [Include any sample test data files or templates]
 
 ## Reporting
 
@@ -102,3 +144,7 @@ HTML Report
 JSON Report
 
 Extent Spark Reports
+
+## Contact
+
+- [Provide contact information for inquiries or support]
