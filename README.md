@@ -126,7 +126,7 @@ Glimpse of runner class:
 			
 			// Configure the Cucumber plugin options
 			plugin = {"pretty", "json:target/json-report/cucumber.json",
-							"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 			},
 			
 			// Display the Cucumber output in monochrome (removes color codes)
