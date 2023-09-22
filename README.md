@@ -76,7 +76,7 @@ The automation framework structure is as follows:
 The feature file is the essential segment of cucumber tool, which is used to write acceptance steps for automation testing. 
 Acceptance steps generally follow the application specification. A feature file is usually a common file which stores feature, scenarios, and feature description to be tested.
 
-#### Step Definition description:
+**Step Definition description:**
 
 Steps definition file stores the mapping between each step of the scenario defined in the feature file with a code of function to be executed. 
 So, now when Cucumber executes a step of the scenario mentioned in the feature file, it scans the step definition file and figures out which function is to be called.
@@ -103,7 +103,7 @@ Glimpse of Step Definition Class:
 		}
 	}
 
-#### Test Runner Class:
+**Test Runner Class:**
 
 In Cucumber, the test runner file executes the Cucumber feature files and coordinates the steps defined in those feature files with the corresponding step definitions.
 In short, runner class maps the feature file steps to its corresponding step definition code.
@@ -124,14 +124,14 @@ Glimpse of runner class:
 	public class testNgRunner extends AbstractTestNGCucumberTests {
 	}
 
-#### To run the automation scripts, following ways can be followed:
+**To run the automation scripts, following ways can be followed:**
 
 - Run the testng.xml file using TestNG. Single and cross browser testing can be performed using this file.  
 - Run through command line. Open the cmd terminal where pom.xml file is located. Write and run the command (mvn clean install).
 - Run the feature files individually using cucumber.
 - Run the TestRunner class using TestNG.
 
-#### Test Data
+**Test Data:**
 
 - [Describe how to manage test data, if applicable]
 - [Include any sample test data files or templates]
