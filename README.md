@@ -92,3 +92,13 @@ To run the automation scripts, following ways can be followed:
 - Run through command line. Open the cmd terminal where pom.xml file is located. Write and run the command (mvn clean install).
 - Run the feature files individually using cucumber.
 - Run the TestRunner class using TestNG.
+
+## Reporting
+
+Following reports will be generated: 
+
+HTML Report
+
+JSON Report
+
+Extent Spark Reports
