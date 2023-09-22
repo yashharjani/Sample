@@ -64,8 +64,31 @@ The Page Object pattern provides a solution by centralizing selectors (classes, 
 
 The automation framework structure is as follows:
 
-- Under src/test/java, there are Page object classes, Test runner class, and Step definitions.
-- Under src/test/resources, there are Feature files.
-- Reports are generated in two folders: SwagLabs_Project\Reports and SwagLabs_Project\target\HTMlReports\report.html
-- There is a POM.xml file in which all dependencies and plugins are there.
-- There is also a testng.xml file located at SwagLabs_Project\testng.xml for cross browser testing.
+- Under /Basic_Template/src/main/java, there are main java classes (such as baseClass, browserSelector, utils, etc) and page object classes. 
+- Under /Basic_Template/src/test/java, there are feature files, test runner class, and step definitions.
+- All the property files like configuration file are present under /Basic_Template/src/test/resources path.
+- Reports are generated at /Basic_Template/Reports/ExtentReport.html path.
+- There is a POM.xml file in which all dependencies and plugins are present.
+- There is also a testng.xml file located at /Basic_Template/testng.xml for cross browser testing such as Chrome, Firefox, Microsoft Edge, etc.
+
+Feature file description:
+
+The feature file is the essential segment of cucumber tool, which is used to write acceptance steps for automation testing. 
+Acceptance steps generally follow the application specification. A feature file is usually a common file which stores feature, scenarios, and feature description to be tested.
+
+Step Definition description:
+
+Steps definition file stores the mapping between each step of the scenario defined in the feature file with a code of function to be executed. 
+So, now when Cucumber executes a step of the scenario mentioned in the feature file, it scans the step definition file and figures out which function is to be called.
+
+Test Runner Class:
+
+In Cucumber, the test runner file executes the Cucumber feature files and coordinates the steps defined in those feature files with the corresponding step definitions.
+In short, runner class maps the feature file steps to its corresponding step definition code.
+
+To run the automation scripts, following ways can be followed:
+
+- Run the testng.xml file using TestNG. Single and cross browser testing can be performed using this file.  
+- Run through command line. Open the cmd terminal where pom.xml file is located. Write and run the command (mvn clean install).
+- Run the feature files individually using cucumber.
+- Run the TestRunner class using TestNG.
