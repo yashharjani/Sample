@@ -153,15 +153,15 @@ Glimpse of runner class:
 
 <ins>**POM File:**<ins>
 
-- POM is basically **Project Object Model**. It is fundamental unit of work in Maven. It is an XML file that resides in the base directory of the project as pom.xml. 
+-> POM is basically **Project Object Model**. It is fundamental unit of work in Maven. It is an XML file that resides in the base directory of the project as pom.xml. 
 The POM contains information about the project and various configuration detail used by Maven to build the project(s).
 
 Some of the configuration that can be specified in the POM are: 
 
--> Project Version
--> Build profiles
+- Project Version
+- Build profiles
 
-- Important plugins which are included are maven-cucumber-reporting, maven-compiler-plugin and maven-surefire-plugin.
+-> Important plugins which are included are maven-cucumber-reporting, maven-compiler-plugin and maven-surefire-plugin.
 
 ## Reporting
 
