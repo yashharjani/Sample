@@ -39,7 +39,7 @@ This Test Automation Framework is created using Java + Selenium Web Driver + Tes
 Additionally, it offers the ability to capture screenshots for tests and generate error shots for failed test cases.
 
 In this repository, we encourage the use of Behavior-Driven Development (BDD) with Cucumber and Java to develop automation scripts. 
-We provide Step Definitions packaged under /Basic_Template/src/test/java/Stepdef/homeScreen.java .
+We provide Step Definitions packaged under /{Project_name}/src/test/java/Stepdef/homeScreen.java .
 These Step Definitions can be customized according to your needs.
 
 Tests are written in the Cucumber framework using the Gherkin syntax. If you're new to Gherkin and Cucumber, you can find more information at https://cucumber.io/docs/cucumber/
@@ -64,12 +64,12 @@ The Page Object pattern provides a solution by centralizing selectors (classes, 
 
 The automation framework structure is as follows:
 
-- Under /Basic_Template/src/main/java, there are main java classes (such as baseClass, browserSelector, utils, etc) and page object classes. 
-- Under /Basic_Template/src/test/java, there are feature files, test runner class, and step definitions.
-- All the property files like configuration file are present under /Basic_Template/src/test/resources path.
-- Reports are generated at /Basic_Template/Reports/ExtentReport.html path.
+- Under /{Project_name}/src/main/java, there are some important java classes (such as baseClass, browserSelector, utils, etc) and page object classes. 
+- Under /{Project_name}/src/test/java, there are feature files, test runner class, and step definitions.
+- All the property files like configuration file are present under /{Project_name}/src/test/resources path.
+- Reports are generated at /{Project_name}/Reports/ExtentReport.html path.
 - There is a POM.xml file in which all dependencies and plugins are present.
-- There is also a testng.xml file located at /Basic_Template/testng.xml for cross browser testing such as Chrome, Firefox, Microsoft Edge, etc.
+- There is also a testng.xml file located at /{Project_name}/testng.xml for cross browser testing such as Chrome, Firefox, Microsoft Edge, etc.
 
 <ins>**Feature file description:**<ins>
 
@@ -149,7 +149,13 @@ Glimpse of runner class:
 <ins>**Test Data:**<ins>
 
 - [Describe how to manage test data, if applicable]
-- [Include any sample test data files or templates]
+- [Include any sample test data files or templates or just write here]
+
+<ins>**POM File:**<ins>
+
+- POM is basically **Project Object Model** file in which all the required plugins and maven dependencies are included. It is fundamental unit of work in Maven. 
+It is an XML file that resides in the base directory of the project as pom. xml. The POM contains information about the project and various configuration detail used by Maven to build the project(s).
+- Important plugins which are included are maven-cucumber-reporting, maven-compiler-plugin and maven-surefire-plugin.
 
 ## Reporting
 
