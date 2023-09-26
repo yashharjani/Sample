@@ -160,8 +160,21 @@ Some of the configuration that can be specified in the POM are:
 
 - Project Version
 - Build profiles
+- Plugins
+- Maven dependencies
 
--> Important plugins which are included are maven-cucumber-reporting, maven-compiler-plugin and maven-surefire-plugin.
+-> Important plugins which are included are **maven-cucumber-reporting** , **maven-compiler-plugin** and **maven-surefire-plugin**.
+-> Some important maven dependencies which are included in the POM file are as follows:
+
+- webdrivermanager
+- testng 
+- cucumber-java
+- cucumber-testng
+- selenium-support
+- extentreports
+- extentreports-cucumber7-adapter
+
+Note: Maven dependencies and plugins can vary as per the project use and requirements. 
 
 ## Reporting
 
