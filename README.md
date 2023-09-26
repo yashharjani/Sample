@@ -156,7 +156,7 @@ Glimpse of runner class:
 -> POM is basically **Project Object Model**. It is fundamental unit of work in Maven. It is an XML file that resides in the base directory of the project as pom.xml. 
 The POM contains information about the project and various configuration detail used by Maven to build the project(s).
 
-Some of the configuration that can be specified in the POM are: 
+-> Some of the configuration that can be specified in the POM are: 
 
 - Project Version
 - Build profiles
@@ -164,17 +164,22 @@ Some of the configuration that can be specified in the POM are:
 - Maven dependencies
 
 -> POM Example:
+	
+	<?xml version="1.0" encoding="UTF-8"?>
+	<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<project xmlns = "http://maven.apache.org/POM/4.0.0"
-	   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
-	   xsi:schemaLocation = "http://maven.apache.org/POM/4.0.0
-	   http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	   <modelVersion>4.0.0</modelVersion>
-
-	   <groupId>com.companyname.project-group</groupId>
-	   <artifactId>project</artifactId>
-	   <version>1.0</version>
+    <groupId>org.example</groupId>
+    <artifactId>Basic_Template</artifactId>
+    <version>1.0-SNAPSHOT</version>
 	</project>
+	
+-> Note: 
+
+- Maven dependencies and plugins can vary as per the project use and requirements. 
+- All POM files require the project element and three mandatory fields: groupId, artifactId, version.
 
 -> Important plugins which are included are **maven-cucumber-reporting** , **maven-compiler-plugin** and **maven-surefire-plugin**.
 
@@ -187,8 +192,6 @@ Some of the configuration that can be specified in the POM are:
 - selenium-support
 - extentreports
 - extentreports-cucumber7-adapter
-
-Note: Maven dependencies and plugins can vary as per the project use and requirements. 
 
 ## Reporting
 
